@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="/static/images/favicon (1).ico" type="image/x-icon">
+    <title>Vinyl store</title>
+</head>
+<body>
+    <header>
+        <div class="navbar container">
+            <a href="index.html">
+                <img width="100" height="100" src="static/images/logo.png" alt="">
+            </a>
+            <nav>
+                <ul class="navbar-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Discounts</a></li>
+                    <li><a href="#advantages">Advantages</a></li>
+                    <li><a href="#footer">Contacts</a></li>
+                </ul>
+            </nav>
+            <form action="">
+                <button type="submit" class="search-btn">
+                    <svg class="find-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path color="white" d="M13 13L19 19M8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15Z" stroke="black" stroke-linecap="round" stroke-width="1.5"/>
+                    </svg>
+                </button>
+                <input type="text" placeholder="Artist, Song, Album ..." class="search-field">
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <section id="special-deals">
+            <div class="container">
+                <h2>Special Deals</h2>
+                <div class="deals-grid">
+                    <div class="deals-card">
+                        <a href="#">
+                            <img src="static/images/deals-1.png" alt="deals-1" width="200" height="200" class="center">
+                            <div class="deals-card-info">
+                                <span class="deals-cards-songname block">Africa Unite</span>
+                                <span class="deals-cards-artistname block">Bob Marley</span>
+                                <p class="deals-cards-price"><span class="oldprice">100$</span>  80$</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="deals-card">
+                        <a href="#">
+                                <img src="static/images/deals-2.png" alt="deals-2" width="200" height="200" class="center">
+                                <div class="deals-card-info">
+                                    <span class="deals-cards-songname block">Sicko Mode</span>
+                                    <span class="deals-cards-artistname block">Travis Scott</span>
+                                    <p class="deals-cards-price"><span class="oldprice">110$</span>  60$</p>
+                                </div>
+                            </a>
+                        </div>
+                    <div class="deals-card">
+                        <a href="#">
+                                <img src="static/images/deals-3.png" alt="deals-3" width="200" height="200" class="center">
+                                <div class="deals-card-info">
+                                    <span class="deals-cards-songname block">Let It Be </span>
+                                    <span class="deals-cards-artistname block">The Beatles</span>
+                                    <p class="deals-cards-price"><span class="oldprice">125$</span>  90$</p>
+                                </div>
+                            </a>
+                        </div>
+                    <div class="deals-card "
+                    ><a href="#">
+                                <img src="static/images/deals-4.png" alt="deals-4" width="200" height="200" class="center">
+                                <div class="deals-card-info">
+                                    <span class="deals-cards-songname block">The Eminem Show</span>
+                                    <span class="deals-cards-artistname block">Eminem</span>
+                                    <p class="deals-cards-price"><span class="oldprice">100$</span>  75$</p>
+                                </div>
+                            </a>
+                        </div>
+                    <div class="deals-card">
+                        <a href="#">
+                                <img src="static/images/deals-5.png" alt="deals-5" width="200" height="200" class="center">
+                                <div class="deals-card-info">
+                                    <span class="deals-cards-songname block">DAMN.</span>
+                                    <span class="deals-cards-artistname block">Kendrick Lamar</span>
+                                    <p class="deals-cards-price"><span class="oldprice">90$</span>  65$</p>
+                                </div>
+                            </a>
+                        </div>
+                    <div class="deals-card">
+                        <a href="#">
+                                <img src="static/images/deals-6.png" alt="deals-6" width="200" height="200" class="center">
+                                <div class="deals-card-info">
+                                    <span class="deals-cards-songname block">Nectar</span>
+                                    <span class="deals-cards-artistname block">Joji</span>
+                                    <p class="deals-cards-price"><span class="oldprice">90$</span>  65$</p>
+                                </div>
+                            </a>
+                        </div>
+                    <div class="deals-card big-card">
+                        <a class="deals-link" href="#">
+                                Full Catalog
+                                <svg fill="#ffffff" height="25px" width="25px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 330 330" xml:space="preserve">
+                                    <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+                                        c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+                                        C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+                                        C255,161.018,253.42,157.202,250.606,154.389z" stroke="white" stroke_width="200"/>
+                                </svg>
+                            </a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h1>Company name</h1>
+                <div class="about-info">
+                    Treasure trove for music enthusiasts and collectors, specializing in vinyl records of different genres and artists. Nestled in the heart of the city, this boutique record store is a haven for audiophiles and vintage music aficionados.
+                </div>
+            </div>
+        </section>
+
+        <section id="advantages">
+            <div class="container">
+                <h2>Advantages</h2>
+                <ul class="advs flex">
+                    <li>
+                        <h3 class="adv-title">Genres Galore</h3>
+                        <p class="adv-text">
+                            We boast an extensive collection of vinyl records spanning a wide range of genres. Whether you're into classic rock, jazz, blues, hip-hop, electronic, or even classical, you'll find a diverse selection to satisfy your musical cravings.
+                        </p>
+                        <img src="static/images/adv-1.jpeg" alt="adv-1">
+                    </li>
+                    <li>
+                        <h3 class="adv-title">Rare Finds</h3>
+                        <p class="adv-text">
+                            This shop takes pride in sourcing rare and limited-edition vinyl records, making it a go-to destination for collectors looking to add unique pieces to their collections. From first pressings to special releases, there's always something exciting to discover.
+                        </p>
+                        <img src="static/images/adv-2.jpeg" alt="adv-1">
+                    </li>
+                    <li>
+                        <h3 class="adv-title">New Releases</h3>
+                        <p class="adv-text">
+                            Vinyl Groove Haven doesn't just cater to vintage music lovers. They also stock the latest vinyl releases from contemporary artists, ensuring that both new and seasoned music enthusiasts can find something they love.
+                        </p>
+                        <img src="static/images/adv-3.jpg" alt="adv-1">
+                    </li>
+                    <li>
+                        <h3 class="adv-title">Quality</h3>
+                        <p class="adv-text">
+                            Vinyl Groove Haven doesn't just cater to vintage music lovers. They also stock the latest vinyl releases from contemporary artists, ensuring that both new and seasoned music enthusiasts can find something they love.
+                        </p>
+                        <img src="static/images/adv-4.jpeg" alt="adv-1">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="container">
+                <h2>Contacts</h2>
+                <div class="contact-items flex">
+                    <table>
+                        <tr>
+                            <th>Address</th>
+                            <td>8642 Yule Street, Arvada CO 80007</td>
+                        </tr>
+                        <tr>
+                            <th>Phone</th>
+                            <td>
+                                +(717) 550-1675<br>
+                                +(717) 550-1646
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td>
+                                someemail@gmail.com<br>
+                                anotheremail@gmail.com
+                            </td>
+                        </tr>
+                    </table>
+                    <img src="static/images/contact.jpg" alt="contact" width="50%">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer">
+
+    </footer>
+</body>
+</html>
