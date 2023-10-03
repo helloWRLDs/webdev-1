@@ -193,7 +193,6 @@ ul {
 }
 
 .deals-card:hover:not(:last-child) {
-    /* background-color: #D9E3F2; */
     background-color: rgba(111, 207, 224, .4);
     background-image: url(../static/svg/buy.svg);
     background-size: 20px;

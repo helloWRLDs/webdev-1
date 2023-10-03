@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="shortcut icon" href="/static/images/favicon (1).ico" type="image/x-icon">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar-expand-lg bg-body-tertiary bg-dark navbar">
+            <div class="container">
+              <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button> -->
+              <a class="navbar-brand" href="#">
+                <img src="static/images/logo.png" alt="Bootstrap" width="100" height="100">
+              </a>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Advantages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-disabled="true">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex search-bar" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+              </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <h2>Our Offices</h2>
+                <div id="carouselExampleCaptions" class="carousel slide">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="static/images/cities-1.jpg" class="d-block w-100 object-fit-cover" alt="..." height="500" width="1200">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Astana</h5>
+                          <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="static/images/cities-2.jpg" class="d-block w-100 object-fit-cover" alt="..." height="500" width="1200">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Almaty</h5>
+                          <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="static/images/cities-3.jpg" class="d-block w-100 object-fit-cover" alt="..." height="500" width="1200">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Moscow</h5>
+                          <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Common types of problems</h2>
+                <div class="row">
+                    <div class="col">
+                        <div class="card"">
+                            <img src="static/images/issues-1.png" class="card-img-top" alt="issues-1">
+                            <div class="card-body">
+                                <h5 class="card-title">Delivery issues</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-dark">Cities available</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card"">
+                            <img src="static/images/issues-2.png" class="card-img-top" alt="issues-2">
+                            <div class="card-body">
+                                <h5 class="card-title">Confusion with orders</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-dark">Refund</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card"">
+                            <img src="static/images/issues-3.png" class="card-img-top" alt="issues-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Lost order</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-dark">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card"">
+                            <img src="static/images/issues-4.png" class="card-img-top" alt="issues-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Defective good</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-dark">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>FAQ</h2>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                How do I create an account on your online vinyl store?
+                            </button>
+                        </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                To create an account, click the "Sign Up" or "Register" button on the top right corner of the website. Follow the on-screen instructions to complete the registration process.                            
+                            </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                I forgot my password. How can I reset it?
+                            </button>
+                        </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Click the "Forgot Password" link on the login page. Enter your email address, and we'll send you instructions to reset your password.</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                How can I search for vinyl records on your website?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                You can search for vinyl records using the search bar located at the top of our website. Enter keywords, artist names, or album titles, and then press "Search."
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-us">
+            <div class="container">
+                <h2>Share Your Problem</h2>
+                <form>
+                    <input type="text" class="form-control mb-3 w-25" name="name" id="name" placeholder="John Smith">
+                    <input type="text" class="form-control mb-3 w-25" name="email" id="email" placeholder="john@gmail.com">
+                    <select class="form-select mb-3 w-25" class="form-control" aria-label="Default select example">
+                        <option selected>Astana</option>
+                        <option value="1">Berlin</option>
+                        <option value="2">Moscow</option>
+                        <option value="3">Minsk</option>
+                    </select>
+                    <input type="text" name="name" class="form-control input-text mb-10 w-25" id="name" placeholder="How can we help you?">
+                    <br/>
+                    <button type="submit" class="btn btn-dark btn-lg">Contact</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
