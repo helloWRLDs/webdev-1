@@ -27,6 +27,23 @@
                     <li><a href="contact-page.html">Contacts</a></li>
                 </ul>
             </nav>
+
+            <!-- <button class="accordion">Section 1</button>
+            <div class="panel">
+                <form>
+                    <label for="name">Enter your name</label>
+                    <input type="text" name="name" id="name" class="form-control w-25 mb-2">
+                    <label for="email">Enter your email</label>
+                    <input type="email" name="email" id="email" class="form-control w-25 mb-2">
+                    <label for="password">Enter Your password</label>
+                    <input type="password" name="password" id="password" class="form-control w-25 mb-2">
+                    <label for="password2">Repeat Your password</label>
+                    <input type="password" name="password2" id="password2" class="form-control w-25 mb-2">
+                    <input type="submit" id="registration-submit" class="btn btn-primary" value="Submit">
+                </form>
+            </div> -->
+
+
             <form action="">
                 <button type="submit" class="search-btn">
                     <svg class="find-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,32 +56,60 @@
     </header>
 
     <main>
+       <section>
+        <div class="container">
+            <div class="tab d-flex justify-content-between">
+                <button class="tablinks" onclick="openCity(event, 'ex1')">Example 1</button>
+                <button class="tablinks" onclick="openCity(event, 'ex2')">Example 2</button>
+                <button class="tablinks" onclick="openCity(event, 'ex3')">Example 3</button>
+              </div>
+              
+              <!-- Tab content -->
+              <div id="ex1" class="tabcontent flex">
+                <h3>Example 1</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur possimus obcaecati animi mollitia cumque a, corrupti numquam explicabo voluptatibus nisi dolore sit distinctio tenetur libero, asperiores doloremque nam ipsam sequi!</p>
+              </div>
+              
+              <div id="ex2" class="tabcontent">
+                <h3>Example 2</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur possimus obcaecati animi mollitia cumque a, corrupti numquam explicabo voluptatibus nisi dolore sit distinctio tenetur libero, asperiores doloremque nam ipsam sequi!</p>
+              </div>
+              
+              <div id="ex3" class="tabcontent">
+                <h3>Example 3</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur possimus obcaecati animi mollitia cumque a, corrupti numquam explicabo voluptatibus nisi dolore sit distinctio tenetur libero, asperiores doloremque nam ipsam sequi!</p>
+              </div>
+        </div>
+       </section>
+
         <section>
             <div class="container">
-                <h2>TODO List</h2>
-                <div id="new-task" class="mb-3">
-                    <input type="text" placeholder="Task Name" class="task-input form-control w-25 mb-2">
-                    <button id="push" class="btn btn-primary">Add</button>
+                <button class="accordion block">TODO List</button>
+                <div class="panel">
+                    <h2>TODO List</h2>
+                    <div id="new-task" class="mb-3">
+                        <input type="text" placeholder="Task Name" class="task-input form-control w-25 mb-2">
+                        <button id="push" class="btn btn-primary">Add</button>
+                    </div>
+                
+                    <ul id="tasks" class="list-group">
+                        
+                    </ul>
                 </div>
                 
-                <ul id="tasks" class="list-group">
-                    
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <div class="container">
-                <h2>Timer</h2>
-                <input id="timer-input" type="time" step="2">
-                <button id="timer-start" class="btn btn-primary">Start</button>
-                <button id="timer-stop" class="btn btn-secondary">Stop</button>
-                <div id="time-left">
-
+                <button class="accordion block">Timer</button>
+                <div class="panel">
+                        <h2>Timer</h2>
+                        <input id="timer-input" type="time" step="2">
+                        <button id="timer-start" class="btn btn-primary">Start</button>
+                        <button id="timer-stop" class="btn btn-secondary">Stop</button>
+                        <div id="time-left">
+        
+                        </div>
                 </div>
             </div>
         </section>
-        
+
         <section>
             <div class="container">
                 <h2 id="regTitle">Register Form</h2>
@@ -81,6 +126,7 @@
                 </form>
             </div>
         </section>
+        
     </main>
 
     <script src="static/scripts/scripts.js"></script>

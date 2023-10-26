@@ -4,14 +4,14 @@ document.querySelector('#push').onclick = function() {
         alert("Cannot add empty task");
     } else {
         document.querySelector('#tasks').innerHTML += `
-            <li class="task list-group-item w-25 flex">
-                <span id="taskname" class="w-50">
+            <li class="task list-group-item w-50 flex">
+                <span id="taskname" class="w-75">
                     ${document.querySelector('#new-task input').value}
                 </span>
-                <button class="delete btn btn-danger">
+                <button class="delete btn btn-danger float-right">
                     <span>delete</span>
                 </button>
-                <button class="done btn btn-success">
+                <button class="done btn btn-success float-right">
                     <span>done</span>
                 </button>
             </li>
@@ -27,7 +27,7 @@ document.querySelector('#push').onclick = function() {
     var current_tasks = document.querySelectorAll(".done");
     for (var i = 0; i < current_tasks.length; i++) {
         current_tasks[i].onclick = function() {
-            this.parentNode.style="background-color: #78fa78;";
+            this.parentNode.classList.toggle("done");
         }
     }
 }
@@ -67,9 +67,9 @@ document.querySelector("#timer-start").onclick = function() {
         // Get proper output
         function getOutput(counter) {
             let output = "";
-            output += Math.floor(counter / 3600) + ":";
-            output += Math.floor((counter - 3600) / 60) + ":";
-            output += (counter % 60);
+            output += `${Math.floor(counter / 3600)}:`;
+            output += `${Math.floor((counter - (3600 * Math.floor(counter / 3600))) / 60)}:`;
+            output += (counter % 60)
             return output;
         }
     } else {
@@ -98,3 +98,44 @@ document.querySelector("#registration-submit").onclick = function() {
     alert("Success")
     return true;
 }
+
+
+// Accordion
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+
+//Tabs
+function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+  
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+  
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
