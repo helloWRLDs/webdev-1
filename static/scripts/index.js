@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Limited offer Timer
 document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("greetSound").play();
     document.getElementsByTagName('header')[0].style.marginBottom = 0;
     document.querySelector('#limited-offer').innerHTML += `
     <div id="limited-offer-body">
@@ -142,4 +143,27 @@ function start() {
 
 function toggleMenu() {
     document.getElementById("dd-content").classList.toggle("open");
+}
+
+function toggleLogin() {
+    document.getElementById("login-dd").classList.toggle("open-login");
+}
+
+document.querySelector("#login-submit-btn").onclick = function() {
+    const email = document.querySelector("#login-email").value;
+    const password = document.querySelector("#login-password").value;
+    const password2 = document.querySelector("#login-passwordConf").value;
+
+    if (email == "" || email == null || password == "" || password == null || password2 == null) {
+        alert("Fields cannot be empty or null!")
+        return false;
+    } else if (!email.includes("@")) {
+        alert("Wrong email format!");
+        return false;
+    } else if (password != password2) {
+        alert("Passwords doesn't match!");
+        return false;
+    }
+    alert("Success")
+    return true;
 }

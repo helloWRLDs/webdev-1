@@ -12,6 +12,7 @@
     <title>Vinyl store</title>
 </head>
 <body>
+    <audio src="static/sound/ah-yeah-scratch-things-w-eko-2-103978.mp3" type="audio/mpeg" id="greetSound"></audio>
     <header>
         <div class="navbar container">
             <a href="index.html">
@@ -32,7 +33,22 @@
                 </button>
                 <input type="text" placeholder="Artist, Song, Album ..." class="search-field">
             </form>
-            
+            <button id="loginBtn" onmouseover="toggleLogin()">Login</button>
+            <div id="login-dd" class="login-dd">
+                <form action="index.html" id="login-form">
+                    <label for="email" class="login-label">email</label>
+                    <input type="email" name="email" id="login-email">
+
+                    <label for="password" class="login-label">password</label>
+                    <input type="password" name="password" id="login-password">
+
+                    <label for="passwordConf" class="login-label">password confirm</label>
+                    <input type="password" name="passwordConf" id="login-passwordConf">
+                    
+                    <input type="button" value="Confirm" id="login-submit-btn">
+                </form>
+                
+            </div>
         </div>
     </header>
 
