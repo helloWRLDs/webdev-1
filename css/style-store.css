@@ -1,8 +1,16 @@
-html {
+:root {
+    --background-color: rgb(255, 255, 255);
+    --dark-blue: rgba(12,94,180,255);
+    --middle-blue: #8bb1e9;
+    --light-blue: rgba(83,206,222,255);
+    --dark-color: #221f1f;
+}
+
+/* html {
     font-family: "Noto Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #F1F1F1;
     scroll-behavior: smooth;
-}
+} */
 
 .store-grid {
     display: grid;
@@ -11,8 +19,10 @@ html {
 }
 
 .store-item {
-    border: 1px solid black;
-    position: absolute;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 0;
+    background-color: rgba(230, 236, 246);
 }
 
 .store-item-pic {
@@ -36,6 +46,48 @@ html {
 
 .store-item-btn {
     text-decoration: none;
+    width: 150px;
     position: relative;
-    left: 230px;
+    bottom: 0px;
+    left: 118px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: var(--dark-color);
+    color: white;
+    transition: .2s ease-in-out;
+    transition-duration: .3s;
+}
+
+.store-item-btn:hover {
+    background-color: var(--middle-blue);
+    color: var(--dark-color);
+}
+
+.store-item-btn:active {
+    background-color: var(--dark-blue);
+    color: white;
+}
+
+@media screen and (max-width: 1200px) {
+    .store-grid {
+        max-width: 768px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+
+@media screen and (max-width: 880px) {
+    .store-grid {
+        max-width: 500px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+    .store-grid {
+        max-width: 640px;
+        grid-template-columns: 1fr 1fr;
+    }
+
 }

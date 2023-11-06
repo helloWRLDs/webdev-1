@@ -3,7 +3,7 @@
 }
 
 html {
-    font-family: "Noto Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Noto Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
     background-color: #F1F1F1;
     scroll-behavior: smooth;
 }
@@ -77,6 +77,15 @@ section {
 
 .nav-link .active {
     cursor:default;
+}
+
+.navbar-nav li a {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+}
+
+.card-img-top {
+    padding: 50px;
 }
 
 footer {
