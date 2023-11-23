@@ -33,6 +33,7 @@
 
 .store-item-body {
     padding: 0 0 0 20px;
+    text-align: left;
 }
 
 .store-item-title {
@@ -48,8 +49,9 @@
     text-decoration: none;
     width: 150px;
     position: relative;
-    bottom: 0px;
-    left: 118px;
+    bottom: 0;
+    left: 44.4%;
+    border: none;
     padding: 10px 20px;
     cursor: pointer;
     background-color: var(--dark-color);

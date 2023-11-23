@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product-style.css">
     <link rel="shortcut icon" href="/static/images/favicon (1).ico" type="image/x-icon">
     <title>Product Page</title>
 </head>
@@ -33,7 +34,7 @@
                 <input type="text" placeholder="Artist, Song, Album ..." class="search-field">
             </form>
             <button id="loginBtn" onmouseover="toggleLogin()">Login</button>
-            <div id="login-dd" class="login-dd">
+            <!-- <div id="login-dd" class="login-dd">
                 <form action="index.html" id="login-form">
                     <label for="email" class="login-label">email</label>
                     <input type="email" name="email" id="login-email">
@@ -46,13 +47,65 @@
                     
                     <input type="button" value="Confirm" id="login-submit-btn">
                 </form>
-                
+                 -->
             </div>
         </div>
     </header>
-
     <main>
+        <section>
+            <div class="container">
+                <div class="preview-block">
+                    <div class="preview">
+                        <div class="preview-links">
+                            <img src="static/images/deals-5.png" alt="prev" width="100px" height="100px" class="preview-link">
+                            <img src="static/images/store-prev.jpg" alt="prev-1" width="100px" height="100px" class="preview-link">
+                            <video src="static/video/DAMN Animated Cover.mp4" width="100px" height="100px" class="active" class="preview-link"></video>
+                        </div>
+                        <div id="active-preview-div">
+                            <video src="static/video/DAMN Animated Cover.mp4" autoplay muted loop width="100%" height="100%" id="active-preview"></video>
+                        </div>
+                    </div>
+        
+                    <div class="info">
+                        <div class="product-info">
+                            <h2 class="product-title">
+                                DAMN.
+                            </h2>
+                            <h3 class="produdct-author">
+                                Kendrick Lamar
+                            </h3>
+                            <hr>
+                        </div>
+    
+                        <div class="order-details">
+                            <p class="product-price">Price: 
+                                <span class="tooltip">
+                                    100$
+                                    <span class="tooltiptext">46000₸</span>
+                                </span>
+                            </p>
+                            <p class="product-stock">Stock: <span>In Stock</span></p>
+                            <p>Quantity: <button class="quantity-btn">+</button> <input type="number" id="quantity" placeholder="1"> <button class="quantity-btn">-</button></p>
+                            <button class="order-btn">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+                <h2>You may also like</h2>
+            </div>
+        </section>
 
+        <footer id="footer">
+            <div class="container">
+                <img width="150" height="150" src="static/images/logo.png" alt="logo" class="footer-logo">
+                <p class="footer-copyright">© All rights reserved</p>
+            </div>
+        </footer>
     </main>
+    <script src="static/scripts/product.js"></script>
 </body>
 </html>

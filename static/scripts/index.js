@@ -44,6 +44,51 @@ const questions = [
             {text: "Country", correct: false}
         ]
     },
+    {
+        question: `Which iconic rock festival took place in 1969 and featured performances by Jimi Hendrix, Janis Joplin, The Who, and others, becoming a symbol of the counterculture movement of the 1960s?`,
+        answers: [
+            {text: "Woodstock ", correct: true},
+            {text: "Monterey Pop Festival", correct: false},
+            {text: "Isle of Wight Festival", correct: false},
+            {text: "Altamont Free Concert", correct: false}
+        ]
+    },
+    {
+        question: `Which famous composer is often credited with being a crucial figure in the development of Western classical music, particularly for his contributions to the Baroque period with compositions like "Brandenburg Concertos" and "The Well-Tempered Clavier"?`,
+        answers: [
+            {text: "Wolfgang Amadeus Mozart", correct: false},
+            {text: "Johann Sebastian Bach", correct: true},
+            {text: "Ludwig van Beethoven", correct: false},
+            {text: "Antonio Vivaldi", correct: false}
+        ]
+    },
+    {
+        question: `What electronic dance music genre, characterized by its repetitive beats and synthesized melodies, originated in Detroit in the 1980s and played a significant role in the development of modern electronic music?`,
+        answers: [
+            {text: "Trance", correct: false},
+            {text: "Techno", correct: false},
+            {text: "Dubstep", correct: false},
+            {text: "House ", correct: true}
+        ]
+    },
+    {
+        question: `Which iconic British rock band, formed in the 1960s, is known for their experimental approach to music and albums like "The Dark Side of the Moon" and "The Wall"?`,
+        answers: [
+            {text: "The Rolling Stones", correct: false},
+            {text: "Led Zeppelin", correct: false},
+            {text: "Pink Floyd", correct: true},
+            {text: "The Beatles", correct: false}
+        ]
+    },
+    {
+        question: `What music festival, held annually in the Nevada desert, is famous for its eclectic lineup, artistic installations, and emphasis on community and self-expression?`,
+        answers: [
+            {text: "Burning Man", correct: true},
+            {text: "Bonnaroo", correct: true},
+            {text: "Coachella", correct: false},
+            {text: "Glastonbury", correct: false}
+        ]
+    }
 ]
 
 let questionCounter = 0;
@@ -166,28 +211,42 @@ function toggleMenu() {
     document.getElementById("dd-content").classList.toggle("open");
 }
 
-// function toggleLogin() {
-//     document.getElementById("login-dd").classList.toggle("open-login");
-// }
 
-// document.querySelector("#login-submit-btn").onclick = function() {
-//     const email = document.querySelector("#login-email").value;
-//     const password = document.querySelector("#login-password").value;
-//     const password2 = document.querySelector("#login-passwordConf").value;
+document.querySelector("#login-submit-btn").onclick = function() {
+    const email = document.querySelector("#login-email").value;
+    const password = document.querySelector("#login-password").value;
+    const password2 = document.querySelector("#login-passwordConf").value;
 
-//     if (email == "" || email == null || password == "" || password == null || password2 == null) {
-//         alert("Fields cannot be empty or null!")
-//         return false;
-//     } else if (!email.includes("@")) {
-//         alert("Wrong email format!");
-//         return false;
-//     } else if (password != password2) {
-//         alert("Passwords doesn't match!");
-//         return false;
-//     }
-//     alert("Success")
-//     return true;
-// }
+    if (email == "" || email == null || password == "" || password == null || password2 == null) {
+        alert("Fields cannot be empty or null!")
+        return false;
+    } else if (!email.includes("@")) {
+        alert("Wrong email format!");
+        return false;
+    } else if (password != password2) {
+        alert("Passwords doesn't match!");
+        return false;
+    }
+    document.querySelector("#login-box").innerHTML = `
+        <span class="close">&times;</span>
+        <form action="">
+            <label for="code" class="login-label">Enter Code from </label>
+            <input type="text" name="code" id="login-code">
+            
+            <input type="button" value="Confirm" id="code-submit-btn">
+        </form>
+    `;
+    document.querySelector("#code-submit-btn").onclick = () => {
+        alert("Success");
+        setTimeout(function() {
+            document.getElementById("login-box").style.display = "none";
+            document.getElementsByTagName("html")[0].style.overflowY = "scroll";
+        }, 1000);
+        return true;
+    }
+    
+}
+
 
 let logibBtn = document.getElementById("loginBtn");
 logibBtn.addEventListener("click", () => {

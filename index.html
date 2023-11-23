@@ -64,17 +64,16 @@
         <div id="login-box">
             <span class="close">&times;</span>
             <form action="">
-                <label for="login-box-email" class="login-box-lbl">Email</label>
-                <input type="email" name="login-box-input" id="login-box-email">
+                <label for="email" class="login-label">Email</label>
+                <input type="email" name="email" id="login-email">
 
-                <label for="logib-box-password" class="login-box-lbl">Password</label>
-                <input type="password" name="logib-box-input" id="logib-box-password">
+                <label for="password" class="login-label">Password</label>
+                <input type="password" name="password" id="login-password">
 
-                <input type="submit" value="Login" id="login-box-log-btn" class="block">
-                <span class="block">or</span>
-                <button class="btn" id="login-box-reg-btn" class="block">
-                    Register now
-                </button>
+                <label for="passwordConf" class="login-label">Confirm Password</label>
+                <input type="password" name="passwordConf" id="login-passwordConf">
+                
+                <input type="button" value="Confirm" id="login-submit-btn">
             </form>
         </div>
 
@@ -110,7 +109,7 @@
                 <h2>Special Deals</h2>
                 <div class="deals-grid">
                     <div class="deals-card">
-                        <a href="#">
+                        <a href="product-page.html">
                             <img src="static/images/deals-1.png" alt="deals-1" width="200" height="200" class="center">
                             <div class="deals-card-info">
                                 <span class="deals-cards-songname block">Africa Unite</span>
@@ -120,7 +119,7 @@
                         </a>
                     </div>
                     <div class="deals-card">
-                        <a href="#">
+                        <a href="product-page.html">
                                 <img src="static/images/deals-2.png" alt="deals-2" width="200" height="200" class="center">
                                 <div class="deals-card-info">
                                     <span class="deals-cards-songname block">Sicko Mode</span>
@@ -130,7 +129,7 @@
                             </a>
                         </div>
                     <div class="deals-card">
-                        <a href="#">
+                        <a href="product-page.html">
                                 <img src="static/images/deals-3.png" alt="deals-3" width="200" height="200" class="center">
                                 <div class="deals-card-info">
                                     <span class="deals-cards-songname block">Let It Be </span>
@@ -139,8 +138,8 @@
                                 </div>
                             </a>
                         </div>
-                    <div class="deals-card "
-                    ><a href="#">
+                    <div class="deals-card ">
+                        <a href="product-page.html">
                                 <img src="static/images/deals-4.png" alt="deals-4" width="200" height="200" class="center">
                                 <div class="deals-card-info">
                                     <span class="deals-cards-songname block">The Eminem Show</span>
@@ -150,7 +149,7 @@
                             </a>
                         </div>
                     <div class="deals-card">
-                        <a href="#">
+                        <a href="product-page.html">
                                 <img src="static/images/deals-5.png" alt="deals-5" width="200" height="200" class="center">
                                 <div class="deals-card-info">
                                     <span class="deals-cards-songname block">DAMN.</span>
@@ -160,7 +159,7 @@
                             </a>
                         </div>
                     <div class="deals-card">
-                        <a href="#">
+                        <a href="product-page.html">
                                 <img src="static/images/deals-6.png" alt="deals-6" width="200" height="200" class="center">
                                 <div class="deals-card-info">
                                     <span class="deals-cards-songname block">Nectar</span>
@@ -275,7 +274,10 @@
     </main>
 
     <footer id="footer">
-
+        <div class="container">
+            <img width="150" height="150" src="static/images/logo.png" alt="logo" class="footer-logo">
+            <p class="footer-copyright">© All rights reserved</p>
+        </div>
     </footer>
     <script src="static/scripts/puzzle.js"></script>
     <script src="static/scripts/index.js"></script>

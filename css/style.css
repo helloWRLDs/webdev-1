@@ -28,6 +28,7 @@ h2, h1 {
     line-height: 1.5em;
     font-weight: 700;
     color:var(--nav-bg);
+    text-align: left;
 }
 
 p {
@@ -66,6 +67,20 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
+}
+
+.background-video {
+    right: 0;
+    top: 0;
+    opacity: 0.8;
+    display: block;
+    position:fixed;
+    z-index: -100;
+    min-width: 100%;
+    min-height: 100%;
+    height: 100%;
+    object-fit: fill;
+    background-color: rgba(25, 145, 167, 0) !important;
 }
 
 .find-icon {
@@ -235,20 +250,64 @@ ul {
     margin-bottom: 10px;
 }
 
+#login-box input:not(:last-child) {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--middle-blue);
+    background-color: inherit;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
+#login-box input:not(:last-child):focus {
+    border-bottom: 2px solid var(--elem-active);
+}
+
+#login-box label {
+    text-align: center;
+}
+
+.login-label:first-child {
+    margin-top: 30px;
+}
+
 #login-submit-btn {
-    display: block;
-    margin-top: 20px;
+    display: flex;
     padding: 10px;
     cursor: pointer;
-    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color: var(--middle-blue);
+    border: none;
 }
 
 #login-submit-btn:hover {
-    display: block;
-    margin-top: 20px;
+    background-color: var(--elem-hover);
+}
+
+#login-submit-btn:active {
+    background-color: var(--elem-active);
+}
+
+#code-submit-btn {
+    display: flex;
     padding: 10px;
     cursor: pointer;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color: var(--middle-blue);
+    border: none;
+}
+
+#code-submit-btn:hover {
     background-color: var(--elem-hover);
+}
+
+#code-submit-btn:active {
+    background-color: var(--elem-active);
 }
 
 .navbar-links li:hover {
@@ -257,12 +316,10 @@ ul {
 
 .navbar-links li:hover a {
     color: var(--elem-hover);
-    /* color: #bce3ea; */
 }
 
 .navbar-links li:active a {
     color: var(--elem-active);
-    /* color: #8bb1e9; */
 }
 
 .about-info {
@@ -486,7 +543,7 @@ body {
 footer {
     width: 100%;
     background-color: var(--nav-bg);
-    min-height: 150px;
+    min-height: 200px;
 }
 
 #limited-offer-body {
@@ -607,14 +664,14 @@ footer {
 #login-box {
     display: none;
     position: fixed;
-    border: 1px solid black;
-    background-color: var(--bg-color);
+    background-color: var(--nav-bg);
+    color: white;
     width: 500px;
     margin: 0 auto;
     text-align: center;
+    top: 10%;
     left: 0px;
     right: 0px;
-    padding: 40px 20px;
     z-index: 100;
     transition: all .3s ease-in-out;
 }
@@ -624,6 +681,7 @@ footer {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    margin-right: 10px;
 }
   
 .close:hover,
@@ -708,6 +766,21 @@ body {
     top: 40px;
     left: 12%;
     border: 5px solid green;
+}
+
+footer .container {
+    display: flex;
+    align-items: center;
+
+}
+
+.footer-logo {
+    margin-right: auto;
+}
+
+.footer-copyright {
+    justify-self:flex-end;
+    color: white;
 }
 
 @media screen and (max-width: 1200) {

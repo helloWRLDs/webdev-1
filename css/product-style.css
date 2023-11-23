@@ -1,0 +1,162 @@
+:root {
+    --middle-blue: #8bb1e9;
+    --bg-color: rgb(230, 236, 246);
+    --elem-hover: #298cc6;
+    --elem-active: #0958b2;
+    --nav-bg: #221f1f;
+    scrollbar-width: thin;
+}
+
+html {
+    font-family: "Noto Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    background-color: white;
+}
+
+.preview {
+    width: 70%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.preview-links {
+    text-align: left;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.preview-links img {
+    margin-right: 10px;
+}
+
+.active {
+    outline: #298cc6 2px solid;
+    outline-offset: 2px;
+}
+
+.info {
+    margin-top: 110px;
+    width: 28%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    height: 60%;
+}
+
+.preview-block {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.product-info {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+}
+
+.order-details {
+    text-align: left;
+    padding: 10px 20px;
+}
+
+.product-title {
+    margin: 0;
+    width: 100%;
+}
+
+.product-price {
+    margin-bottom: 20px;
+}
+
+input[type=number] {
+    -moz-appearance: none;
+}
+
+#quantity {
+    width: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    text-align: center;
+}
+
+#quantity:focus {
+    border: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.product-stock {
+    margin-bottom: 20px;
+}
+
+.product-author {
+    margin: 0;
+    width: 100%;
+}
+
+.quantity-btn {
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.quantity-btn:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.quantity-btn:active {
+    background-color: rgb(182, 182, 182);
+}
+
+.order-btn {
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    background-color: var(--middle-blue);
+    color: white;
+    margin-bottom: 30px;
+}
+
+.order-btn:hover {
+    background-color: var(--elem-hover);
+}
+
+.order-btn:active {
+    background-color: var(--elem-active);
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    width: 120px;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
