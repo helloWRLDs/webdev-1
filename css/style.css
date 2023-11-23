@@ -1,19 +1,20 @@
 :root {
-    --background-color: rgb(255, 255, 255);
-    --dark-blue: rgba(12,94,180,255);
     --middle-blue: #8bb1e9;
-    --light-blue: rgba(83,206,222,255);
+    --bg-color: rgb(230, 236, 246);
+    --elem-hover: #298cc6;
+    --elem-active: #0958b2;
+    --nav-bg: #221f1f;
+    scrollbar-width: thin;
 }
 
 html {
     font-family: "Noto Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* background-color: #F1F1F1; */
     scroll-behavior: smooth;
     background-color: white;
 }
 
 header {
-    background-color: #221f1f;
+    background-color: var(--nav-bg);
     margin-bottom: 40px;
 }
 
@@ -26,7 +27,7 @@ h2, h1 {
     font-size: 2em;
     line-height: 1.5em;
     font-weight: 700;
-    color:#221f1f;
+    color:var(--nav-bg);
 }
 
 p {
@@ -86,12 +87,12 @@ ul {
 }
 
 .search-field:hover {
-    border-bottom-color: #298cc6;
+    border-bottom-color: var(--elem-hover);
 }
 
 .search-field:active,
 .search-field:focus {
-    border-bottom-color: #0958b2;
+    border-bottom-color: var(--elem-active);
 }
 
 .search-field:focus {
@@ -110,13 +111,11 @@ ul {
 }
 
 .search-btn:hover svg path {
-    stroke: var(--light-blue);
-    /* stroke: #298cc6; */
+    stroke: var(--elem-hover);
 }
 
 .search-btn:active svg path {
-    stroke: var(--dark-blue);
-    /* stroke: #0958b2; */
+    stroke: var(--elem-active);
 }
 
 .find-icon path {
@@ -173,7 +172,7 @@ ul {
 
 .navbar-links {
     padding-top: 4px;
-    background-color: #221f1f;
+    background-color: var(--nav-bg);
     color: white;
     border-radius: 10px;
     display: flex;
@@ -249,7 +248,7 @@ ul {
     margin-top: 20px;
     padding: 10px;
     cursor: pointer;
-    background-color: var(--light-blue);
+    background-color: var(--elem-hover);
 }
 
 .navbar-links li:hover {
@@ -257,12 +256,12 @@ ul {
 }
 
 .navbar-links li:hover a {
-    color: var(--light-blue);
+    color: var(--elem-hover);
     /* color: #bce3ea; */
 }
 
 .navbar-links li:active a {
-    color: var(--dark-blue);
+    color: var(--elem-active);
     /* color: #8bb1e9; */
 }
 
@@ -272,7 +271,8 @@ ul {
     font-weight: 400;
     border-radius: 15px;
     padding: 20px;
-    background-color: #E6ECF6;
+    background-color: var(--bg-color);
+
 }
 
 .deals-grid {
@@ -291,7 +291,7 @@ ul {
     border: 1px  black;
     text-align: left;
     border-radius: 10px;
-    background-color: #E6ECF6;
+    background-color: var(--bg-color);
 }
 
 .deals-card:hover:not(:last-child) {
@@ -341,12 +341,11 @@ body {
 
 .big-card a:hover {
     color: #D9E3F2;
-    color: var(--light-blue);
+    color: var(--elem-hover);
 }
 
 .big-card a:active {
-    color: #8bb1e9;
-    /* color: var(--dark-blue) */
+    color: var(--elem-active)
 }
 
 .big-card a svg path {
@@ -354,11 +353,11 @@ body {
 }
 
 .big-card a:hover svg path {
-    fill: #D9E3F2;;
+    fill: var(--elem-hover);;
 }
 
 .big-card a:active svg path {
-    fill: #8bb1e9;;
+    fill: var(--elem-active);;
 }
 
 .deals-card-info {
@@ -486,7 +485,7 @@ body {
 
 footer {
     width: 100%;
-    background-color: #221f1f;
+    background-color: var(--nav-bg);
     min-height: 150px;
 }
 
@@ -510,7 +509,7 @@ footer {
 }
 
 .limited-offer-btn:hover {
-    background-color: var(--light-blue);
+    background-color: var(--elem-hover);
 }
 
 .limited-offer-body-title {
@@ -552,15 +551,16 @@ footer {
     cursor: pointer;
     width: 100%;
     background-color: white;
-    color: #221f1f;
+    color: var(--nav-bg);
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-    outline: nonee;
+    outline: none;
+    transition: all .3s ease-in-out;
 }
 
 .qBtn:hover {
-    background-color: #221f1f;
+    background-color: var(--middle-blue);
     color: white;
 }
 
@@ -568,11 +568,10 @@ footer {
     width: 10%;
     padding: 10px;
     margin: 0 auto;
-    background-color: rgb(86, 86, 248);
+    background-color: var(--middle-blue);
     color: white;
     border-radius: 5px;
     cursor: pointer;
-    /* float: right; */
 }
 
 .nextBtn:hover {
@@ -588,7 +587,128 @@ footer {
     display: none;
 }
 
+#to-top-btn {
+    position: fixed;
+    top: 90%;
+    left: 90%;
+    cursor: pointer;
+    border-radius: 50%;
+    border-spacing: 0;
+    border: none;
+    display: none;
+    background-color: var(--bg-color);
+    transition: all .3s ease-in-out;
+}
 
+#to-top-btn:hover {
+    background-color: var(--elem-hover);
+}
+
+#login-box {
+    display: none;
+    position: fixed;
+    border: 1px solid black;
+    background-color: var(--bg-color);
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    padding: 40px 20px;
+    z-index: 100;
+    transition: all .3s ease-in-out;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.login-box-lbl {
+    display: block;
+}
+
+.login-box-input {
+    display: block;
+}
+
+#logib-box-log-btn {
+    margin: 0 auto;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#board {
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#board img {
+    width: 78px;
+    height: 78px;
+    border: 0.5px solid gray;
+}
+
+
+#pieces {
+    width: 1040px;
+    height: 160px;
+    border: 2px solid black;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+#pieces img {
+    width: 78px;
+    height: 78px;
+    border: 0.5px solid white;
+}
+
+#puzzle-hint {
+    border-spacing: 0px;
+    border: none;
+    padding: 20px 30px;
+    background-color: var(--middle-blue);
+    color: white;
+    cursor: pointer;
+}
+
+#puzzle-hint:hover {
+    background-color: var(--elem-hover);
+}
+
+#puzzle-hint:focus {
+    background-color: var(--elem-active);
+}
+
+#hint {
+    position: fixed;
+    z-index: 1000;
+    display: none;
+    top: 40px;
+    left: 12%;
+    border: 5px solid green;
+}
 
 @media screen and (max-width: 1200) {
     .search-btn {

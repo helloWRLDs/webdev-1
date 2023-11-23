@@ -52,9 +52,24 @@ document.addEventListener("DOMContentLoaded", function() {
     updateState(questionCounter)
 });
 
+
+//Scroll-top btn
+let scrollBtn = document.getElementById("to-top-btn")
+//Appearance of scroll-top btn
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollBtn.style.display = "block";
+    } else {
+        scrollBtn.style.display = "none";
+    }
+}
+//Event Listener for scroll-top btn
+scrollBtn.addEventListener("click", () => {
+    document.documentElement.scrollTop = 0;
+})
+
 // Limited offer Timer
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("greetSound").play();
     document.getElementsByTagName('header')[0].style.marginBottom = 0;
     document.querySelector('#limited-offer').innerHTML += `
     <div id="limited-offer-body">
@@ -86,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // Update question
 function updateState(q_i) {
     let temp = questionCounter + 1;
-    document.getElementById("qCounter").innerHTML = temp;
+    document.getElementById("qCounter").innerHTML = `${temp} / ${questions.length}`;
     let btnsDiv = document.getElementById("answer-buttons")
     let btns = btnsDiv.getElementsByClassName("qBtn");
     document.getElementById("question").innerHTML = questions[q_i].question;
@@ -97,7 +112,6 @@ function updateState(q_i) {
         }
     }
 }
-
 // Get the answer
 const btnsDiv = document.getElementById("answer-buttons");
 const btns = btnsDiv.getElementsByClassName("qBtn");
@@ -105,18 +119,23 @@ for (let i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function() {
         for (let j = 0; j < questions.length; j++) {
             if (document.getElementById("question").innerHTML === questions[j].question && questions[j].answers[i].correct) {
-                console.log("correct");
                 btns[i].classList.add("correct");
                 nextBtn.classList.remove("inactive");
             } else if (document.getElementById("question").innerHTML === questions[j].question && !questions[j].answers[i].correct) {
-                console.log("incorrect");
+                document.getElementById("answer-buttons").style.display = "none";
+                document.getElementById("question").style.display = "none";
+                document.getElementById("quizTitle").innerHTML = "Incorrect! No discount for you.";
+                nextBtn.classList.add("inactive");
+                setTimeout(function() {
+                    document.getElementById("quizEvent").style.display = "none";
+                    document.getElementById("limited-offer-body").style.display = "none";
+                }, 2000);
             }
         }
     })
 }
 
 const nextBtn = document.getElementById("nextBtn");
-
 // Process the correct question
 nextBtn.addEventListener("click", function() {
     if (questionCounter < questions.length) {
@@ -130,11 +149,13 @@ nextBtn.addEventListener("click", function() {
         setTimeout(function() {
             document.getElementById("quizEvent").style.display = "none";
             document.getElementById("limited-offer-body").style.display = "none";
-        }, 5000);
+        }, 2000);
         
     }
     
 })
+
+
 
 
 function start() {
@@ -145,25 +166,41 @@ function toggleMenu() {
     document.getElementById("dd-content").classList.toggle("open");
 }
 
-function toggleLogin() {
-    document.getElementById("login-dd").classList.toggle("open-login");
-}
+// function toggleLogin() {
+//     document.getElementById("login-dd").classList.toggle("open-login");
+// }
 
-document.querySelector("#login-submit-btn").onclick = function() {
-    const email = document.querySelector("#login-email").value;
-    const password = document.querySelector("#login-password").value;
-    const password2 = document.querySelector("#login-passwordConf").value;
+// document.querySelector("#login-submit-btn").onclick = function() {
+//     const email = document.querySelector("#login-email").value;
+//     const password = document.querySelector("#login-password").value;
+//     const password2 = document.querySelector("#login-passwordConf").value;
 
-    if (email == "" || email == null || password == "" || password == null || password2 == null) {
-        alert("Fields cannot be empty or null!")
-        return false;
-    } else if (!email.includes("@")) {
-        alert("Wrong email format!");
-        return false;
-    } else if (password != password2) {
-        alert("Passwords doesn't match!");
-        return false;
+//     if (email == "" || email == null || password == "" || password == null || password2 == null) {
+//         alert("Fields cannot be empty or null!")
+//         return false;
+//     } else if (!email.includes("@")) {
+//         alert("Wrong email format!");
+//         return false;
+//     } else if (password != password2) {
+//         alert("Passwords doesn't match!");
+//         return false;
+//     }
+//     alert("Success")
+//     return true;
+// }
+
+let logibBtn = document.getElementById("loginBtn");
+logibBtn.addEventListener("click", () => {
+    if (document.getElementById("login-box").style.display === "none") {
+        document.getElementById("login-box").style.display = "block";
+        document.getElementsByTagName("html")[0].style.overflowY = "hidden";
+    } else {
+        document.getElementById("login-box").style.display = "none";
+        document.getElementsByTagName("html")[0].style.overflowY = "scroll";
     }
-    alert("Success")
-    return true;
-}
+})
+
+document.getElementsByClassName("close")[0].addEventListener("click", () => {
+    document.getElementById("login-box").style.display = "none";
+    document.getElementsByTagName("html")[0].style.overflowY = "scroll";
+})

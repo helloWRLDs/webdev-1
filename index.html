@@ -12,7 +12,6 @@
     <title>Vinyl store</title>
 </head>
 <body>
-    <audio src="static/sound/ah-yeah-scratch-things-w-eko-2-103978.mp3" type="audio/mpeg" id="greetSound"></audio>
     <header>
         <div class="navbar container">
             <a href="index.html">
@@ -20,7 +19,8 @@
             </a>
             <nav>
                 <ul class="navbar-links">
-                    <li onclick="toggleMenu()">Home</li>
+                    <!-- <li onclick="toggleMenu()">Home</li> -->
+                    <li><a href="#">Home</a></li>
                     <li><a href="store-page.html">Store</a></li>
                     <li><a href="contact-page.html">Contacts</a></li>
                 </ul>
@@ -33,9 +33,10 @@
                 </button>
                 <input type="text" placeholder="Artist, Song, Album ..." class="search-field">
             </form>
-            <button id="loginBtn" onmouseover="toggleLogin()">Login</button>
-            <div id="login-dd" class="login-dd">
-                <form action="index.html" id="login-form">
+            <button id="loginBtn">Login</button>
+            <!-- <button id="loginBtn" onmouseover="toggleLogin()">Login</button> -->
+            <!-- <div id="login-dd" class="login-dd">
+                <form action="" id="login-form">
                     <label for="email" class="login-label">email</label>
                     <input type="email" name="email" id="login-email">
 
@@ -48,17 +49,40 @@
                     <input type="button" value="Confirm" id="login-submit-btn">
                 </form>
                 
-            </div>
+            </div> -->
         </div>
     </header>
 
     <main>
-        <ul class="dd-content" id="dd-content">
+        <!-- <ul class="dd-content" id="dd-content">
             <li><a href="#special-deals">Special Deals</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#advantages">Advantages</a></li>
             <li><a href="#contact">Contacts</a></li>
-        </ul>
+        </ul> -->
+
+        <div id="login-box">
+            <span class="close">&times;</span>
+            <form action="">
+                <label for="login-box-email" class="login-box-lbl">Email</label>
+                <input type="email" name="login-box-input" id="login-box-email">
+
+                <label for="logib-box-password" class="login-box-lbl">Password</label>
+                <input type="password" name="logib-box-input" id="logib-box-password">
+
+                <input type="submit" value="Login" id="login-box-log-btn" class="block">
+                <span class="block">or</span>
+                <button class="btn" id="login-box-reg-btn" class="block">
+                    Register now
+                </button>
+            </form>
+        </div>
+
+        <div class="container">
+            <button id="to-top-btn">
+                <img src="static/svg/top-btn.svg" alt="top-btn" height="50px" width="50px">
+            </button>
+        </div>
 
         <section id="limited-offer">
         </section>
@@ -66,7 +90,6 @@
         <section id="quizEvent">
             
             <div class="container">
-                <!-- <iframe src="quiz.html" frameborder="0" width="100%" height="500px"></iframe> -->
                 <div class="quiz" id="quiz">
                     <h2 id="quizTitle">Question <span id="qCounter"></span></h2>
                     <h3 id="question">sss</h3>
@@ -237,11 +260,24 @@
             </div>
         </section>
 
+        <section id="puzzle">
+            <div class="container">
+                <img src="static/images/hint.jpg" alt="" width="500px" height="500px" id="hint">
+                <div id="board"></div>
+                <h2>Turns: <span id="turns">0</span></h2>
+                <div id="pieces"></div>
+                <button id="puzzle-hint">
+                    Get a Hint
+                </button>
+            </div>
+        </section>
+
     </main>
 
     <footer id="footer">
 
     </footer>
+    <script src="static/scripts/puzzle.js"></script>
     <script src="static/scripts/index.js"></script>
 </body>
 </html>

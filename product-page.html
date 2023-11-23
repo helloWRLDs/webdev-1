@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="/static/images/favicon (1).ico" type="image/x-icon">
+    <title>Product Page</title>
+</head>
+<body>
+    <header>
+        <div class="navbar container">
+            <a href="index.html">
+                <img width="100" height="100" src="static/images/logo.png" alt="logo">
+            </a>
+            <nav>
+                <ul class="navbar-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="store-page.html">Store</a></li>
+                    <li><a href="contact-page.html">Contacts</a></li>
+                </ul>
+            </nav>
+            <form action="">
+                <button type="submit" class="search-btn">
+                    <svg class="find-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path color="white" d="M13 13L19 19M8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8C15 11.866 11.866 15 8 15Z" stroke="black" stroke-linecap="round" stroke-width="1.5"/>
+                    </svg>
+                </button>
+                <input type="text" placeholder="Artist, Song, Album ..." class="search-field">
+            </form>
+            <button id="loginBtn" onmouseover="toggleLogin()">Login</button>
+            <div id="login-dd" class="login-dd">
+                <form action="index.html" id="login-form">
+                    <label for="email" class="login-label">email</label>
+                    <input type="email" name="email" id="login-email">
+
+                    <label for="password" class="login-label">password</label>
+                    <input type="password" name="password" id="login-password">
+
+                    <label for="passwordConf" class="login-label">password confirm</label>
+                    <input type="password" name="passwordConf" id="login-passwordConf">
+                    
+                    <input type="button" value="Confirm" id="login-submit-btn">
+                </form>
+                
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+    </main>
+</body>
+</html>
