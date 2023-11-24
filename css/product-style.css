@@ -140,9 +140,9 @@ input::-webkit-inner-spin-button {
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
-  }
+}
   
-  .tooltip .tooltiptext {
+.tooltip .tooltiptext {
     visibility: hidden;
     background-color: black;
     color: #fff;
@@ -155,8 +155,38 @@ input::-webkit-inner-spin-button {
     margin-left: -60px;
     position: absolute;
     z-index: 1;
-  }
+}
   
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-  }
+.tooltip:hover .tooltiptext {
+visibility: visible;
+}
+
+.suggestions {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.suggestion {
+    width: 15%;
+    margin-right: 15px;
+    cursor: pointer;
+    background-color: var(--bg-color);
+    border-radius: 5px;
+}
+
+.suggestion:hover {
+    background-color: var(--middle-blue);
+}
+
+.suggestion:active {
+    background-color: var(--elem-hover);
+}
+
+.suggestion h3 {
+    margin-bottom: 30px;
+}
+
+section {
+    margin-bottom: 45px;
+}

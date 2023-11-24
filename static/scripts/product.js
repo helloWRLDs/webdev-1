@@ -16,6 +16,6 @@ let previews = document.getElementsByClassName("preview-link")
 for (let i = 0; i < previews.length; i++) {
     previews[i].addEventListener("click", () => {
         console.log(previews[i])
-        document.getElementById("active-preview-div").innerText = previews[i].innerHTML;
+        document.getElementById("active-preview-div").innerHTML = previews[i].innerHTML;
     })
 }
